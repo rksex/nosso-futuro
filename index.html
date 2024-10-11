@@ -6,16 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style-book.css">
+  <link rel="shortcut icon" href="image.png" type="image/x-icon">
   <title>Nossa Historia</title>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
+  <canvas id="canvas" style="position: fixed; top: 0; left: 0; pointer-events: none;"></canvas>
   <div class="book">
 
     <div class="cover" onclick="turnPage()">
       <p>COM TODO CARINHO</p>
-      <h2>Nossa Historia<br><span>Book</span></h2>
+      <h2>Nossa Historia<br><span id="texto">O Inicio</span></h2>
       <p>Sarah & Henrique</p>
     </div>
 
@@ -180,20 +182,62 @@
 
     <div class="content" id="page-8">
       <div class="title-page">
+        <p>Te amo</p>
+
+      </div>
+
+      <div class="conteudo">
+        <p>
+          Antes de pular para a parte onde tudo se inicia, gostaria de pedir que tenha paciência comigo. Ainda tenho
+          muita coisa para aprender, e quero aprender com você, especialmente sobre como lidar com meus sentimentos. Sei
+          que sou muito intenso e, às vezes, isso atrapalha, porque você gosta de ter seu momento. Também quero aprender
+          a entender quando você quer ficar sozinha e ter seu espaço. Quero te compreender mais.
+        </p>
+      </div>
+      <div class="navigation">
+        <button onclick="prevPage()"><i class="fa-solid fa-arrow-left"></i></button>
+        <button onclick="nextPage()"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <div class="content" id="page-9">
+      <div class="title-page">
+        <p>Te amo - pt2</p>
+
+      </div>
+
+      <div class="conteudo">
+        <p>
+
+          Que você seja sincera quando algo te magoar, que me mostre quando eu sair dos trilhos. Desejo que sejamos mais
+          conectados, que sejamos o casal que, desde o início, sempre sonhamos ser. Lembra da nossa listinha? Aquela
+          onde dois jovens apaixonados, sem pensar nos problemas, mas focados no futuro, a criaram. Eu quero realizá-la
+          com você, apenas com você. Sei que tudo é complicado, mas você tem a mim e eu a você. Juntos, sei que podemos
+          realizar tudo o que queremos... Agora, vamos para a parte mais aguardada.
+        </p>
+      </div>
+      <div class="navigation">
+        <button onclick="prevPage()"><i class="fa-solid fa-arrow-left"></i></button>
+        <button onclick="nextPage()"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <div class="content" id="page-10">
+      <div class="title-page">
         <p> </p>
 
       </div>
 
       <div class="conteudo">
         <p>
-          Sarah, você aceita namorar comigo?
+          Sarah, desde já, eu queria dizer que te amo, e que você sempre pode contar comigo. Você me daria a honra de ser minha namorada?
         </p>
         <div class="buttons">
-          <button id="btn-sim">Sim</button>
+          <button id="btn-sim" id="botao" onclick="alterarTexto()">Sim</button>
           <button id="btn-nao">Não</button>
         </div>
         <p>
-          Então, poder continuar a nossa história juntos.
+          <span id="texto2"></span>
         </p>
       </div>
       <div class="navigation">
